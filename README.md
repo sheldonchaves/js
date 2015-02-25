@@ -1,7 +1,10 @@
-# js
+##Modules(IIFE)
 
-#### Modules
-
+##### basic
+	(function(){
+	  // my private code
+	}());
+	
 #####basic structure:
 
 
@@ -38,3 +41,10 @@
 	
 	console.log(project.util.formater.func1(10));
 	console.log(project.util.formater.func2(10));
+#
+#####passing global objects in IIFE
+
+	//example 3 arguments
+	function(window, document, $) { // or minification (w, d, $)
+	  //local scope
+	}(window, document, window.jQuery); // global window, document, and jQuery
